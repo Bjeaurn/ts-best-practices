@@ -14,6 +14,7 @@ export type Test = {
     bliep: string;
     herp: number;
 }
+
 export class Another {
     readonly bliep: string;
     readonly herp: string;
