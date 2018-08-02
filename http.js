@@ -3,8 +3,7 @@
 // Example is borrowed from what like an Angular HttpClient might do underwater type-wise.
 exports.__esModule = true;
 function getHttp(url, exampleData) {
-    var data = exampleData;
-    return data;
+    return exampleData;
 }
 exports.getHttp = getHttp;
 var data = {
@@ -22,6 +21,12 @@ exports.Another = Another;
 var test1 = getHttp('', data);
 var test2 = getHttp('', data);
 var test3 = new Another(data);
-console.log(typeof test1, test1);
-console.log(typeof test2, test2);
-console.log(typeof test3, test3);
+// Autocompletion from the type system works for all three. 
+// Only test3 has the actual `typeof` respond with `Object Another {}`, 
+// which is an upside to the other 2 options.
+// test1.bliep
+// test2.bliep
+// test3.bliep
+console.log(typeof test1, test1); // object { bliep: 'bloep', herp: 'derp' }
+console.log(typeof test2, test2); // object { bliep: 'bloep', herp: 'derp' }
+console.log(typeof test3, test3); // object Another { bliep: 'bloep', herp: 'derp' }
