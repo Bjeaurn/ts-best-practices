@@ -31,7 +31,7 @@ const test3 = new Another(data);
 
 // Autocompletion from the type system works for all three. 
 // Only test3 has the actual `typeof` respond with `Object Another {}`, 
-// which is a downside to the other 2 options.
+// which is an upside to the other 2 options.
 
 // test1.bliep
 // test2.bliep
