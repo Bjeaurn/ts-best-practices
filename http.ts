@@ -2,8 +2,7 @@
 // Example is borrowed from what like an Angular HttpClient might do underwater type-wise.
 
 export function getHttp<T>(url: string, exampleData?: T): T {
-    let data: T = exampleData as T;
-    return data as T;
+    return exampleData as T;
 }
 
 const data: any = {
